@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+	
+	<div class="container">
+
+		<div class="row justify-content-center align-items-center">
+			<div class="counter col-6">
+				<h4>Счет</h4>
+					<div class="row counts">
+						<div class="col-6">
+							<span class="badge badge-info">Игрок</span>
+							<span id="player_counter">0</span>
+						</div>
+						<div class="col-6">
+							<span class="badge badge-info">Компьютер</span>
+							<span id="comp_counter">0</span>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center align-items-center">
+			<table class="col-6 field"></table>
+		</div>
+
+		<div class="row justify-content-center align-items-center">
+			<div class="start_section col-6">
+				<div class="row">
+					<div class="input-group mb-3 col-12">
+					  <input type="number" class="form-control time_input" placeholder="Введите время, мс" aria-describedby="basic-addon2">
+					  <div class="input-group-append">
+					    <button class="btn btn-success start_btn" data-toggle="modal" data-target="" type="button">Начать</button>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="modal fade" id="emptyTimeModal" tabindex="-1" role="dialog" aria-labelledby="emptyTimeModalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-sm" role="document">
+	    <div class="modal-content">
+	      <div class="modal-body text-center">
+	        Пожалуйста, введите время.
+	      </div>
+				<div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">OK</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="gameOverModal" tabindex="-1" role="dialog" aria-labelledby="gameOverModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Игра окончена со счетом:</h5>
+	      </div>
+	      <div class="modal-body text-center">
+					 <div class="container-fluid">
+    					<div class="row">
+				         	<div class="col-6">
+				        		<span class="badge badge-info">Игрок</span>
+										<span id="player_counter_modal"></span>
+				        	</div>
+						      <div class="col-6">
+						      	<span class="badge badge-info">Компьютер</span>
+										<span id="comp_counter_modal"></span>
+						      </div>
+							</div>
+					</div>					
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="close_window btn btn-secondary btn-sm" data-dismiss="modal">Закрыть окно</button>
+	        <button type="button" class="play_again btn btn-primary btn-sm">Сыграть еще раз</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
